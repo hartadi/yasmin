@@ -14,14 +14,16 @@
     <link rel="stylesheet" href="{{url("theme/app.css")}}" />
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition @if(auth()->check()) sidebar-mini @else sidebar-collapse @endif">
     <div class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
+                @if(auth()->check())
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
+                @endif
             </ul>
 
             <ul class="navbar-nav ml-auto">
@@ -31,6 +33,7 @@
             </ul>
         </nav>
 
+        @if(auth()->check())
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <div class="sidebar">
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
@@ -38,7 +41,7 @@
                         <img src="{{url("theme/img/user2-160x160.jpg")}}" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="{{url('/')}}" class="d-block">{{auth()->user()->name??""}}</a>
                     </div>
                 </div>
 
@@ -47,6 +50,7 @@
                 </nav>
             </div>
         </aside>
+        @endif
 
         <div class="content-wrapper">
             <div class="content-header">
