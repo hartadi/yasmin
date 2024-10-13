@@ -9,6 +9,11 @@ Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'i
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::prefix("master")->middleware("auth")->group(function () {
+    AdvancedRoute::controllers([
+        "satuan" => App\Http\Controllers\Master\SatuanController::class,
+    ]);
+});
 Route::prefix("transaksi")->middleware("auth")->group(function () {
     AdvancedRoute::controllers([
         "barang-masuk"  => App\Http\Controllers\Transaksi\BarangMasukController::class,

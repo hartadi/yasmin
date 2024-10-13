@@ -16,4 +16,9 @@ class Barang extends Model
     {
         return $this->hasMany(FifoMasuk::class, "barang_id");
     }
+
+    public function satuan()
+    {
+        return $this->belongsTo(Satuan::class, "id_m_satuan");
+    }
 }

@@ -59,43 +59,43 @@
         </a>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/satuan")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Satuan</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/barang")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Barang</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/gudang")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Gudang</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/departemen")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Departemen</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/konsumen")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Konsumen</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/akun")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Master Akun</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("master/bank")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Master Bank</p>
                 </a>
