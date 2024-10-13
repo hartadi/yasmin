@@ -11,7 +11,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix("master")->middleware("auth")->group(function () {
     AdvancedRoute::controllers([
-        "satuan" => App\Http\Controllers\Master\SatuanController::class,
+        "satuan"     => App\Http\Controllers\Master\SatuanController::class,
+        "barang"     => App\Http\Controllers\Master\BarangController::class,
+        "gudang"     => App\Http\Controllers\Master\GudangController::class,
+        "departemen" => App\Http\Controllers\Master\DepartemenController::class,
     ]);
 });
 Route::prefix("transaksi")->middleware("auth")->group(function () {
