@@ -15,6 +15,9 @@ Route::prefix("master")->middleware("auth")->group(function () {
         "barang"     => App\Http\Controllers\Master\BarangController::class,
         "gudang"     => App\Http\Controllers\Master\GudangController::class,
         "departemen" => App\Http\Controllers\Master\DepartemenController::class,
+        "konsumen"   => App\Http\Controllers\Master\KonsumenController::class,
+        "akun"       => App\Http\Controllers\Master\AkunController::class,
+        "bank"       => App\Http\Controllers\Master\BankController::class,
     ]);
 });
 Route::prefix("transaksi")->middleware("auth")->group(function () {
