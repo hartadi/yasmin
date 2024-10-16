@@ -173,7 +173,7 @@ class PencatatanHarianController extends Controller
 
     function get_no_transaksi($tanggal_transaksi, $prefix)
     {
-        $prefix  = format("$prefix-{0}", date('m-Y', strtotime($tanggal_transaksi)));
+        $prefix  = format("$prefix-{0}-", date('m-Y', strtotime($tanggal_transaksi)));
         $last_no = PembukuanHarian::whereRaw("no_transaksi LIKE ?", "$prefix%")
             ->orderByRaw("no_transaksi DESC")->lockForUpdate()->first();
         $no = $last_no ? (intval(str_replace($prefix, "", $last_no->no_transaksi)) + 1) : 1;
