@@ -2,3 +2,24 @@
 .table.align-middle td {
     vertical-align: middle;
 }
+
+
+select[readonly],
+select[readonly].select2-hidden-accessible+.select2-container {
+    pointer-events: none;
+    touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible+.select2-container .select2-selection {
+    background: #eff2f5;
+    box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible+.select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible+.select2-container .select2-selection__clear {
+    display: none;
+}
+
+.select2-container--bootstrap5 .select2-selection__clear {
+    right: 1.7rem !important;
+}

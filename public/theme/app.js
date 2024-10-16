@@ -47,7 +47,7 @@ $(function () {
 function initControl() {
     $(".datepicker").each((i, item) => {
         $(item).datetimepicker({
-            format: 'L'
+            format: 'YYYY-MM-DD'
         });
     });
     $(".numeric").inputmask('decimal', {

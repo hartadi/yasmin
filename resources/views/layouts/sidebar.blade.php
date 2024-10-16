@@ -125,7 +125,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("transaksi/pencatatan-harian")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Pencatatan Harian</p>
                 </a>
@@ -167,7 +167,7 @@
         </a>
         <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url("transaksi/piutang")}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Piutang</p>
                 </a>

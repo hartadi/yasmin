@@ -22,8 +22,10 @@ Route::prefix("master")->middleware("auth")->group(function () {
 });
 Route::prefix("transaksi")->middleware("auth")->group(function () {
     AdvancedRoute::controllers([
-        "barang-masuk"  => App\Http\Controllers\Transaksi\BarangMasukController::class,
-        "barang-keluar" => App\Http\Controllers\Transaksi\BarangKeluarController::class,
+        "barang-masuk"      => App\Http\Controllers\Transaksi\BarangMasukController::class,
+        "barang-keluar"     => App\Http\Controllers\Transaksi\BarangKeluarController::class,
+        "pencatatan-harian" => App\Http\Controllers\Transaksi\PencatatanHarianController::class,
+        "piutang"           => App\Http\Controllers\Transaksi\PiutangController::class,
     ]);
 });
 Route::prefix("laporan")->middleware("auth")->group(function () {
