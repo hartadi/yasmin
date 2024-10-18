@@ -72,8 +72,6 @@ class BarangMasukController extends Controller
             $jumlah_pesan   = $request->jumlah_pesan;
             $catatan_detail = $request->catatan_detail;
 
-
-
             foreach ($barang_id as $i => $item) {
                 BarangMasukDetail::create([
                     "id_t_barangmasuk_h" => $barang_masuk->id_t_barangmasuk_h,
